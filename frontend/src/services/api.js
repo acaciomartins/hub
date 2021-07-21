@@ -1,12 +1,10 @@
 import axios from "axios";
-import { getToken } from "./auth";
-import { logout } from "./auth";
-import { hist } from "./../index";
+// import { getToken } from "./auth";
 // import jwt from "jsonwebtoken";
 
 const api = axios.create({
   // baseURL: "http://localhost:3333",
-  baseURL: "https://viacep.com.br/ws/"
+  baseURL: "https://servicodados.ibge.gov.br/api/"
 });
 
 api.interceptors.request.use(async (config) => {
@@ -27,8 +25,8 @@ api.interceptors.response.use(undefined, (error) => {
   const { status } = error.response;
 
   if (status === 401) {
-    logout();
-    hist.push("/");
+    // logout();
+    // hist.push("/");
   }
 
   if (status === 500) {

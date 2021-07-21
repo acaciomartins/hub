@@ -1,19 +1,19 @@
 import { GET_CEP } from '../actions/actionTypes';
  
 const INITIAL_STATE = {
-	cep: [...cep],
+	cep: [],
 };
 
-const manageClientsReducer = (state = INITIAL_STATE, action) => {
+const cepReducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
 		case GET_CEP:
 			return {
 				...state,
-				cep: state.clients.concat(action.playload.ceps)
+				cep: action.payload.ceps
 			};
 		default:
 			return state;
 	}
 };
 
-export default manageClientsReducer;
+export default cepReducer;
