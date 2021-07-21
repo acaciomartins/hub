@@ -1,8 +1,8 @@
-import { ADD_CLIENT } from '../actions/actionTypes';
+import { GET_CEP } from '../actions/actionTypes';
 
-const addClient = (newClient) => ({
-    type: ADD_CLIENT,
-    payload: { newClient },
+const getCep = (ceps) => ({
+    type: GET_CEP,
+    payload: { ceps },
   });
 
-  export default addClient;
+  export default getCep;
