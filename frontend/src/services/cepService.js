@@ -1,14 +1,16 @@
 import api from "../services/api";
-//actions do reducer
-import { getCepAction } from "../reducers/cepReducer";
+import store from '../store/store';
 
-export async function getCepAction(dispatch, params) {
+//actions do reducer
+import { getCepAction } from "../actions/cepAction";
+
+export async function getCep(params) {
   await api
     //.get("centralatendimento/chamado/buscar/", { params: pamsra })
-    .get("1001000/json/?callback=callback_name")
+    .get("v1/localidades/distritos/520005005")
     .then((response) => {
       console.debug("response.data..: ", response.data);
-      dispatch(getCepAction(response.data));
+      store.dispatch(getCepAction(response.data));
     })
     .catch((errors) => {
       return Promise.reject(errors);
