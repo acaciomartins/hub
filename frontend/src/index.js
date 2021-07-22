@@ -10,7 +10,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
-      <TelaRedux />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
