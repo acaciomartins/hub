@@ -1,0 +1,28 @@
+@import "_sizes.scss";
+
+.card-component {
+  &__simple {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: $size-16;
+    padding: $size-18;
+
+    & > * {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+    .card-text {
+      font-weight: bold;
+    }
+    &__icon {
+      grid-template-columns: auto 1fr auto;
+
+      .fa {
+        padding-left: $size-6;
+        transform: translateY(-0.1em);
+        font-size: $size-30;
+      }
+    }
+  }
+}

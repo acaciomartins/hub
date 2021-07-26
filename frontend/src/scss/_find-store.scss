@@ -1,0 +1,16 @@
+.find-store {
+  .component-searchbox {
+    height: auto;
+    @media (min-width: 768px) {
+      width: 37em;
+    }
+  }
+  .clean-btn {
+    &.btn:not(:disabled):not(.disabled) {
+      margin-top: 5px !important;
+    }
+    &.btn-link {
+      text-decoration: underline;
+    }
+  }
+}

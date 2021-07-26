@@ -1,0 +1,20 @@
+.dirf {
+  font-size: $size-16;
+  font-family: "Nunito", sans-serif;
+
+  .card {
+    font-weight: 400;
+    color: var(--color-blue);
+
+    .card-title {
+      font-weight: 700;
+      font-size: $size-24;
+    }
+    .component-icon {
+      padding-left: 0.6rem;
+    }
+    .component-icon-info {
+      padding-top: 0.15em !important;
+    }
+  }
+}

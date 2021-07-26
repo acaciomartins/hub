@@ -1,0 +1,80 @@
+.key-management {
+  .h6, .size-1 {
+    font-size: 1rem;
+  }
+  .row {
+    &.border-grey {
+      margin-right: -20px;
+      margin-left: -20px;
+
+      &-top {
+        border-top: 1px solid var(--color-light-gray);
+      }
+      &-bottom {
+        border-bottom: 1px solid var(--color-light-gray);
+      }
+    }
+  }
+}
+
+.pix-card {
+  .border-right-col {
+    border-right: 1px solid var(--color-light-gray);
+  }
+  button.close {
+    font-size: 2rem;
+    color: var(--color-blue-gray);
+  }
+
+  .arrow-container {
+    background-color: $white;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 11px;
+  }
+
+  .pix-logo {
+    max-width: 85px;
+  }
+
+  .block {
+    display: block;
+  }
+}
+
+.create-key-box {
+  img {
+    padding-right: 0.5em;
+  }
+}
+
+.create-key {
+  .component-select {
+    width: 100%;
+    .dropdown-toggle.btn {
+      width: 100%;
+    }
+    &.disabled button.dropdown-toggle.btn {
+      background-color: $disabled-grey;
+      border: 1px solid $disabled-grey;
+    }
+  }
+
+  input.form-control {
+    margin-top: 10px;
+  }
+}
+
+.create-key-list {
+  a {
+    cursor: pointer;
+  }
+}
+
+.label-evp {
+  font-size: $size-16;
+}

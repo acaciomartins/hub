@@ -1,0 +1,7 @@
+// Variable overrides
+:root {
+  /* Header */
+  --header-height: 100px;
+  --logo-width: 86px;
+  --logo-height: var(--logo-width);
+}

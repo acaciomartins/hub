@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './scss/style.scss';
 import TelaRedux from './pages/tela-redux/telaRedux'
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';

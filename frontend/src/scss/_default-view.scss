@@ -1,0 +1,33 @@
+.default-view {
+  min-height: 100vh;
+  background: #0069E7;
+  background-size: cover;
+  background-position: center top;
+
+  &__dark-bg {
+    min-height: 100vh;
+    background-color: #0069E7;
+    display: table;
+  }
+  &__box-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__logo {
+    .figure-caption {
+      color: white;
+    }
+  }
+  &__content {
+    max-width: 33em;
+    min-height: 2em;
+
+    .link {
+      color: var(--color-blue-secondary);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
