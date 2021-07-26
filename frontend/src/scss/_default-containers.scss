@@ -1,0 +1,219 @@
+:root {
+  --hover-height: 4px;
+}
+.app-header-menu {
+  ul {
+    li {
+      a {
+        color: var(--color-light-gray);
+      }
+    }
+  }
+}
+.app-header-menu-dropdown {
+  a {
+    color: var(--color-light-gray);
+  }
+}
+.app {
+  &-header {
+    height: var(--header-height);
+    background-color: var(--color-blue);
+    // * {
+    //   color: var(--color-light-gray);
+    // }
+    .dropdown-menu {
+      margin-top: 0;
+      top: 90%;
+      right: 0;
+    }
+    .navbar {
+      &-brand {
+        width: var(--logo-width);
+        height: var(--logo-height);
+        & > img {
+          width: auto;
+          height: auto;
+        }
+      }
+      &-nav {
+        margin-left: 60px;
+        & > *,
+        .dropdown > a {
+          margin-left: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > a {
+          font-size: 26px;
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+        .info:hover {
+          border-radius: 50%;
+          background-color: #fff2;
+        }
+        .dropdown {
+          height: var(--header-height);
+          margin-left: 0;
+          &-item {
+            color: var(--color-blue);
+          }
+          .cil-user {
+            font-size: 20px;
+          }
+          & > a {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 50%;
+          }
+          & > a:hover {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #fff2;
+          }
+        }
+      }
+    }
+  }
+
+  &-menu {
+    height: var(--header-height);
+    position: relative;
+    & > div {
+      ul,
+      li,
+      a {
+        height: 100%;
+      }
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transition: ease all 0.3s;
+        font-size: 18px;
+
+        &:after {
+          content: " ";
+          width: 100%;
+          height: var(--hover-height);
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transform: translateY(var(--hover-height));
+          transition: ease all 0.3s;
+        }
+        &:hover,
+        &.active {
+          color: white;
+        }
+        &.active {
+          background-color: white;
+          font-weight: bold;
+          &:after {
+            transform: translateY(0);
+            background-color: var(--color-light-gray);
+          }
+        }
+      }
+      &:hover li a.active {
+        &:after {
+          opacity: 0.4;
+        }
+        &:hover:after {
+          opacity: 1;
+        }
+      }
+    }
+    .nav-icon {
+      display: none;
+    }
+  }
+
+  &-footer {
+    .help-center {
+      button {
+        color: white;
+
+        &:hover {
+          b,
+          svg,
+          svg path {
+            fill: var(--color-yellow);
+            color: var(--color-yellow);
+          }
+        }
+        &.chat svg,
+        &.phone svg {
+          position: absolute;
+          fill: white;
+        }
+        &.chat svg {
+          transform: translateX(-2em);
+        }
+        &.phone svg {
+          transform: translateX(-1.7em) translateY(0.2em) rotate(90deg);
+        }
+      }
+    }
+    .copy {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+.header-fixed .app-body {
+  margin-top: var(--header-height);
+}
+.app-breadcrumb {
+  .breadcrumb {
+    margin: 20px 0 15px;
+    border-bottom: none;
+    background-color: transparent;
+
+    &-item + .breadcrumb-item:before {
+      content: "•";
+    }
+    &-item,
+    &-item a,
+    &-item + .breadcrumb-item:before {
+      color: var(--color-blue-gray);
+    }
+    &-item.active {
+      color: var(--color-blue);
+      font-weight: bold;
+      font-size: 1.2em;
+      transform: translateY(-0.1em);
+    }
+  }
+}
+
+.component-datepicker {
+  button:focus {
+    outline: none;
+  }
+}
+
+.component-select {
+  > .dropdown-menu .dropdown-item:active {
+    background-color: #f0f3f5;
+  }
+}
+
+.Toastify__close-button:focus {
+  outline: none;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1360px;
+  }
+}

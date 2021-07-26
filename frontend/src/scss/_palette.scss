@@ -1,0 +1,50 @@
+$black: #000;
+$white: #fff;
+$grey: #ccc;
+$light-grey: #f8f8f8;
+$light-grey2: #a2a1a1;
+$light-grey3: #dbdbdb;
+$light-grey4: #f4f4f4;
+$medium-grey: #616161;
+$dark-grey: #666;
+$grey-font: #9b9b9b;
+$grey-font2: #999;
+$grey-font3: #333;
+$grey-border: #e0e0e0;
+$grey-bar: #e7e4e6;
+$red-background: #fdd4d7;
+$red: #ee4250;
+$green: #a4cd39;
+$yellow: #f9d537;
+$orange: #f5a623;
+$orange-background: #ffe9c4;
+$blue: #003863;
+$disabled-grey: #e4e7ea;
+$light-blue: #ebf5ff;
+$light-blue-grey: #e5f0fd;
+$blue-strong: #0069e7;
+$orange: #ff6000;
+$light-orange: #ffefe5;
+$yellow-stars: #ffd000;
+
+$pattern-gradient: linear-gradient(to left, $blue, $green 31%, $orange 65%, $red);
+$pattern-gradient-yellow: linear-gradient(to left, #ffdf51, $yellow);
+$pattern-gradient-blue: linear-gradient(to left, #2e79c1, $blue);
+
+:root {
+  --color-red: #ff0045;
+  --color-blue: #003863;
+  --color-blue-op-90: rgba(0, 56, 99, 0.9);
+  --color-green: #00ac4d;
+  --color-orange: #fe980b;
+  --color-yellow: #facd02;
+  --color-blue-primary: #0074ce;
+  --color-blue-secondary: #3390d8;
+  --color-blue-secondary-0: #29a2ff;
+  --color-light-gray-0: #f5f8fa;
+  --color-light-gray: #e0e7ed;
+  --color-blue-gray-light-0: #c8d4de;
+  --color-blue-gray-light: #b3c4d0;
+  --color-blue-gray: #7d9ab3;
+  --color-border-table: #f0f1f1;
+}

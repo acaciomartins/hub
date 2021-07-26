@@ -1,0 +1,28 @@
+.default-view-insurance {
+  min-height: 100vh;
+  background: #aa0c0c;
+  background-size: cover;
+  background-position: center top;
+
+  &__dark-bg {
+    min-height: 100vh;
+    background-color: var(--color-background-blue);
+    display: table;
+  }
+  &__box-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__logo {
+    .figure-caption {
+      color: white;
+    }
+  }
+  &__content {
+
+
+    .h3 {
+      color: white;
+    }
+  }
+}

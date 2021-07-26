@@ -1,0 +1,28 @@
+@import "_palette.scss";
+@import "_sizes.scss";
+
+.full-table{
+  text-align: center;
+  div.rt-table .rt-thead .rt-th.-sort-asc{
+    box-shadow: none;
+  }
+  .view-installments{
+    border: none;
+    background-color: transparent;
+    color: $blue;
+    font-size: 13px;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+div.react-calendar__month-view__days > button > abbr{
+  display: none;
+}
+
+abbr[title], abbr[data-original-title]{
+  text-decoration: none;
+}
