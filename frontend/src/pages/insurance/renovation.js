@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-// import history from '../../service/history';
-import DefaultViewInsurance from "../../components/insurance/defaultViewInsurance";
 import PropTypes from "prop-types";
+import history from "../../services/history"
 import {
   Col,
-  Row,
   Carousel,
   CarouselItem,
   CarouselIndicators, Button,
 } from "reactstrap";
-// const itsNotProd = (window.location.hostname !== 'parceirosabasteceai.com.br' && window.location.hostname !== 'www.parceirosabasteceai.com.br');
+import DefaultViewInsurance from "../../components/insurance/defaultViewInsurance";
 
 function Renovation() {
-// if (itsNotProd) history.push({ pathname: '/login' });
 
   const items = [
     {
@@ -32,11 +29,11 @@ function Renovation() {
   ]
 
   return (
-    <DefaultViewInsurance>
-      <div className="mt-5 mb-4 mx-5 ">
-        <CarouselRenovation items={items}/>
-      </div>
-    </DefaultViewInsurance>
+      <DefaultViewInsurance>
+        <div className="mt-5 mb-4 mx-5">
+          <CarouselRenovation items={items}/>
+        </div>
+      </DefaultViewInsurance>
   );
 }
 
@@ -62,50 +59,58 @@ export const CarouselRenovation = ({ items }) => {
   };
 
   const slides = items.map((item, index) => (
-    <CarouselItem
-      key={index}
-      onExiting={() => setAnimating(true)}
-      onExited={() => setAnimating(false)}
-    >
-      <div className="body-carousel-item">
+      <CarouselItem
+          key={index}
+          onExiting={() => setAnimating(true)}
+          onExited={() => setAnimating(false)}
+      >
+        <div className="body-carousel-item">
 
-        <Col className="block">
-          <div>
-            <p className="h3 pb-2 text-center">
-              <img height={110} src={item.image} alt="icone renovação" />{" "}
-            </p>
-          </div>
-          <div>
-            <h3 className="font-weight-bold text-white text-center pb-2">{item.title}</h3>
-          </div>
-          <div className="renovation-subtitle">
-            {item.subtitle}
-          </div>
-        </Col>
-      </div>
-    </CarouselItem>
+          <Col className="block">
+            <div>
+              <p className="h3 pb-2 text-center">
+                <img height={110} src={item.image} alt="icone renovação" />{" "}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-weight-bold text-white text-center pb-2">{item.title}</h3>
+            </div>
+
+            <div className="renovation-subtitle">
+              {item.subtitle}
+            </div>
+
+          </Col>
+        </div>
+      </CarouselItem>
   ));
 
+  const redirectToNew = () => {
+      console.log("new")
+      history.push("/new")
+  }
+
   return (
-    <>
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        interval={false}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} className="mt-3" />
-        {slides}
-      </Carousel>
+      <>
+        <Carousel
+            activeIndex={activeIndex}
+            next={next}
+            previous={previous}
+            interval={false}
+        >
+          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} className="mt-3" />
+          {slides}
+        </Carousel>
 
-      <Button className="renovation-yellow-button" onClick={() => console.log('Novo')}>
-        Simular seguro novo
-      </Button>
+        <Button className="renovation-yellow-button" onClick={() => redirectToNew()}>
+          Simular seguro novo
+        </Button>
 
-      <Button className="renovation-transparent-button" onClick={() => console.log('Renovar')}>
-        Renovar meu seguro
-      </Button>
-    </>
+        <Button className="renovation-transparent-button" onClick={() => console.log('Renovar')}>
+          Renovar meu seguro
+        </Button>
+      </>
 
 
   );
@@ -113,11 +118,11 @@ export const CarouselRenovation = ({ items }) => {
 
 CarouselRenovation.propTypes = {
   items: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string,
-      title: PropTypes.string,
-      subtitle: PropTypes.string
-    })
+      PropTypes.shape({
+        image: PropTypes.string,
+        title: PropTypes.string,
+        subtitle: PropTypes.string
+      })
   ),
 };
 

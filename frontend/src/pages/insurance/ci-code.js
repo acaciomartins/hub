@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import DefaultViewInsurance from "../../../components/insurance/defaultViewInsurance";
+import LayoutForm from "../../components/insurance/layoutForm";
+import WhiteButton from "../../components/insurance/whiteButton";
 
 function CiCode() {
 
-  return (
-    <DefaultViewInsurance showHeader>
-      <div className="mt-5 mb-4 mx-5 ">
-        BOdy
-      </div>
-    </DefaultViewInsurance>
-  );
+    return (
+        <LayoutForm>
+            {/*<div className="mt-5 mb-4 mx-5 ">*/}
+                <p className="form-title">conte aí pra gente, é você que irá dirigir o veículo?</p>
+            <div className="bottom-buttons">
+                <WhiteButton label="Sim, sou eu que vou dirgir" />
+                <WhiteButton label="Não, outra pessoa que irá" />
+            </div>
+            {/*</div>*/}
+        </LayoutForm>
+    );
 }
 
 

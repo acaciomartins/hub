@@ -22,14 +22,20 @@ $blue: #003863;
 $disabled-grey: #e4e7ea;
 $light-blue: #ebf5ff;
 $light-blue-grey: #e5f0fd;
-$blue-strong: #0069e7;
+
 $orange: #ff6000;
 $light-orange: #ffefe5;
-$yellow-stars: #ffd000;
+
 
 $pattern-gradient: linear-gradient(to left, $blue, $green 31%, $orange 65%, $red);
 $pattern-gradient-yellow: linear-gradient(to left, #ffdf51, $yellow);
 $pattern-gradient-blue: linear-gradient(to left, #2e79c1, $blue);
+
+//Renovação
+$blue-strong: #0069e7;
+$blue-typo: #002063;
+$blue-light: #e6f0fd;
+$yellow-stars: #ffd000;
 
 :root {
   --color-red: #ff0045;
