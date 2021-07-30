@@ -1,14 +1,16 @@
 import React from 'react';
 import {Fab, LinearProgress} from "@material-ui/core";
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import { useHistory } from "react-router-dom";
 
 function HeaderForm(props) {
     const normalise = (value, min, max) => (value - min) * 100 / (max - min);
+    const { goBack } = useHistory();
 
     return (
         <div className="layout-form__header" >
             <div>
-                <Fab className="layout-form__header__fab"  >
+                <Fab className="layout-form__header__fab" onClick={goBack} >
                   <ArrowBack className="layout-form__header__fab__icon"/>
                 </Fab>
             </div>
